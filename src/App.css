@@ -1,0 +1,120 @@
+/* General settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
+
+.results-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Student rows */
+.student-header,
+.student-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.7fr 0.7fr 1.2fr;
+  gap: 10px;
+  align-items: center;
+  padding: 15px;
+}
+
+.student-header {
+  background: #222;
+  color: white;
+  font-weight: bold;
+}
+
+.student-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.top-student {
+  background: #fff3cd;
+  font-weight: bold;
+}
+
+.grade {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.grade-A {
+  background: #d4edda;
+  color: #155724;
+}
+
+.grade-B {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.grade-C {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.grade-F {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .results-container {
+    width: 96%;
+    padding: 12px;
+  }
+
+  .student-header,
+  .student-row {
+    grid-template-columns: 1.2fr 1fr 0.6fr 0.6fr 1fr;
+    gap: 5px;
+    padding: 10px 5px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .results-container {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .student-header,
+  .student-row {
+    grid-template-columns: 1.2fr 0.8fr 0.6fr 0.6fr;
+    gap: 4px;
+    padding: 10px 3px;
+    font-size: 11px;
+  }
+
+  /* Hide the status column on small screens */
+  .student-header span:last-child,
+  .student-row span:last-child {
+    display: none;
+  }
+}
